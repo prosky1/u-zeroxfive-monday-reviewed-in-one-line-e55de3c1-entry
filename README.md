@@ -8,6 +8,6 @@ Entry for [Monday, Reviewed in One Line](https://make.fun/bounty/u-zeroxfive-mon
 
 `main.py` writes exactly one line to `/output/entry.txt`:
 
-> Monday arrived like a software update I never agreed to: slower, louder, and impossible to uninstall.
+> One star. Monday arrived on time, answered no emails, and asked me to rate the experience.
 
-101 characters, one sentence, validated at runtime (1–200 characters, single line, no stray whitespace, read-back must match the text exactly).
+90 characters, one sentence, validated at runtime (1–200 characters, exactly 90, single line, no stray whitespace, read-back must match the text exactly).

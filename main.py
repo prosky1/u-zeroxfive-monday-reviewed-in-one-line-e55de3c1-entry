@@ -7,15 +7,21 @@ to /output/entry.txt, and nothing else.
 
 import os
 
-TEXT = "Monday arrived like a software update I never agreed to: slower, louder, and impossible to uninstall."
+TEXT = "One star. Monday arrived on time, answered no emails, and asked me to rate the experience."
 
 MAX_CHARS = 200
+# The tournament-winning TOP 1 line is exactly 90 characters. Pin the
+# length so any accidental edit to TEXT fails loudly instead of
+# silently submitting a different line.
+EXPECTED_CHARS = 90
 
 
 def validate(text: str) -> None:
     """The gate only accepts UTF-8 text of 1 to 200 characters, not only whitespace."""
     if not (1 <= len(text) <= MAX_CHARS):
         raise SystemExit(f"entry must be 1-{MAX_CHARS} chars, got {len(text)}")
+    if len(text) != EXPECTED_CHARS:
+        raise SystemExit(f"entry must be exactly {EXPECTED_CHARS} chars, got {len(text)}")
     if not text.strip():
         raise SystemExit("entry must not be only whitespace")
     if "\n" in text or "\r" in text:
